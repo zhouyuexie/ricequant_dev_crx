@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+
+    "name": "Ricequant Dev Tool",
+    "short_name": "rqdev",
+    "description": "This extension is build for Ricequant developers",
+    "version": "0.0.1",
+
+    "browser_action": {
+        "default_icon": {
+            "16": "assets/ext/logo128.png",
+            "48": "assets/ext/logo128.png",
+            "128": "assets/ext/logo128.png"
+        },
+        "default_popup": "assets/popup/popup.html",
+        "default_title": "Ricequant Dev Tool"
+    },
+    "offline_enabled": true,
+    "background": {
+        "scripts": [
+            "assets/ext/background.js"
+        ]
+    },
+
+    "author": "PoppinL",
+    "omnibox": {
+        "keyword": "ricequant"
+    },
+
+    "permissions": [
+        "*://www.ricequant.com/",
+        "cookies",
+        "tabs"
+    ]
+}

@@ -1,0 +1,17 @@
+body {
+    width: 300px;
+}
+.nav-wrapper {
+    padding-left: 30px;
+    font-size: 14px;
+}
+.collapsible {
+    margin: 0;
+}
+.collapsible .switch {
+    float: right;
+}
+footer.page-footer {
+    margin-top: 0;
+    padding-top: 0;
+}

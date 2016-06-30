@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ricequant Dev Tool</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../materialize/css/materialize.min.css">
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">Ricequant Dev Tool</div>
+        </nav>
+        <main>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">sms</i>
+                        <span>LOG</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" class="js-switch" data-type="log">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>Open this switch will print log in console. Includes request log, response log, debug log, e.t.c.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">build</i>
+                        <span>DEBUG</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" class="js-switch" data-type="debug">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>Open this switch will show page in debug mode. You may find some test feature which means we have no responsibility for it's stability.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">equalizer</i>
+                        <span>PERFORMANCE</span>
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" class="js-switch" data-type="perf">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="collapsible-body">
+                        <p>Open this switch will print performance log in console. It's useful when performance testing. You may find some performance issue by this.</p>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    <span>© 2016 Copyright PoppinL</span>
+                    <a class="grey-text text-lighten-4 right js-feedback" href="javascript:;">Feedback</a>
+                </div>
+            </div>
+        </footer>
+        <script src="jquery-3.0.0.min.js"></script>
+        <script src="../materialize/js/materialize.min.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>
