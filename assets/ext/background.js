@@ -18,20 +18,36 @@ const getCookie = () =>  new Promise(resolve => {
         resolve(curState);
     });
 });
-const setCookie = () => new Promise(resolve => {
-    chrome.cookies.set({
-        url: 'https://www.ricequant.com/',
-        name: cookieName,
-        value: Object.keys(curState).filter(k => curState[k]).join(cookieSplitMark),
-        domain: '.www.ricequant.com',
-        path: '/',
-        secure: false,
-        httpOnly: false,
-        expirationDate: Date.now() + 24 * 60 * 60 * 1000
-    }, () => {
-        resolve();
-    });
-});
+const setCookie = () => Promise.all(
+    [
+        {
+            url: 'https://www.ricequant.com/',
+            domain: '.www.ricequant.com'
+        }, {
+            url: 'http://www.r.com/',
+            domain: '.www.r.com'
+        }, {
+            url: 'http://www.p.com/',
+            domain: '.www.p.com'
+        }, {
+            url: 'http://www.naga.com/',
+            domain: '.www.naga.com'
+        }
+    ].map(item => new Promise(resolve => {
+        chrome.cookies.set({
+            url: item.url,
+            name: cookieName,
+            value: Object.keys(curState).filter(k => curState[k]).join(cookieSplitMark),
+            domain: item.domain,
+            path: '/',
+            secure: false,
+            httpOnly: false,
+            expirationDate: Date.now() + 24 * 60 * 60 * 1000
+        }, () => {
+            resolve();
+        });
+    }))
+);
 
 const enable = type => (curState[type] = true, setCookie());
 const disable = type => (curState[type] = false, setCookie());
