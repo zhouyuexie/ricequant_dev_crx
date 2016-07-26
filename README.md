@@ -8,6 +8,7 @@ Chrome extension for ricequant dev.
 
 ## HISTORY
 
+- v0.0.4: Move google fonts to local
 - v0.0.3:
     - Support r, p, naga
     - Alert online js error
