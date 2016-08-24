@@ -1,9 +1,12 @@
 body {
-    width: 300px;
+    width: 24rem;
 }
-.nav-wrapper {
-    padding-left: 30px;
-    font-size: 14px;
+h1 {
+    margin: 0;
+    padding: 1.5rem 0 1.5rem 1rem;
+    background: #ee6e73;
+    font-size: 1.2rem;
+    color: #fff;
 }
 .collapsible {
     margin: 0;

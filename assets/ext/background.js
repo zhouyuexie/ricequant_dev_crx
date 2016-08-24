@@ -4,7 +4,7 @@ const cookieName = 'rqdev';
 const cookieSplitMark = '_';
 const curState = {};
 
-const getCookie = () =>  new Promise(resolve => {
+const getCookie = () => new Promise(resolve => {
     if (isInit) {
         resolve(curState);
         return;
@@ -22,16 +22,16 @@ const setCookie = () => Promise.all(
     [
         {
             url: 'https://www.ricequant.com/',
-            domain: '.www.ricequant.com'
+            domain: 'www.ricequant.com'
         }, {
             url: 'http://www.r.com/',
-            domain: '.www.r.com'
+            domain: 'www.r.com'
         }, {
             url: 'http://www.p.com/',
-            domain: '.www.p.com'
+            domain: 'www.p.com'
         }, {
             url: 'http://www.naga.com/',
-            domain: '.www.naga.com'
+            domain: 'www.naga.com'
         }
     ].map(item => new Promise(resolve => {
         chrome.cookies.set({

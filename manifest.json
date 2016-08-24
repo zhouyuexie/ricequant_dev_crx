@@ -4,7 +4,7 @@
     "name": "Ricequant Dev Tool",
     "short_name": "rqdev",
     "description": "This extension is build for Ricequant developers",
-    "version": "0.0.4",
+    "version": "0.0.5",
 
     "browser_action": {
         "default_icon": {
