@@ -3,86 +3,75 @@
     <head>
         <meta charset="utf-8">
         <title>Ricequant Dev Tool</title>
-        <link href="../materialIcon/icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="../materialize/css/materialize.min.css">
+        <link rel="stylesheet" href="../lib/font-awesome-4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="popup.css">
     </head>
     <body>
-        <h1>Ricequant Dev Tool</h1>
-        <main>
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header">
-                        <i class="material-icons">sms</i>
+        <header>
+            <a class="fr js-feedback" href="javascript:;">Feedback</a>
+            <h1>Ricequant Dev Tool</h1>
+        </header>
+        <div class="cf">
+            <nav>
+                <ul>
+                    <li data-for="compress">
+                        <i class="fa fa-archive" aria-hidden="true"></i>
+                        <span>COMPRESS</span>
+                    </li>
+                    <li data-for="log">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
                         <span>LOG</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox" class="js-switch" data-type="log">
-                                <span class="lever"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="collapsible-body">
-                        <p>Open this switch will print log in console. Include request log, response log, debug log, e.t.c.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header">
-                        <i class="material-icons">build</i>
+                    </li>
+                    <li data-for="debug">
+                        <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
                         <span>DEBUG</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox" class="js-switch" data-type="debug">
-                                <span class="lever"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="collapsible-body">
-                        <p>Open this switch will show page in debug mode. You may find some test feature which means we have no responsibility for it's stability.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header">
-                        <i class="material-icons">archive</i>
-                        <span>UNMIN</span>
-                        <div class="switch">
-                            <label>
-                                <input type="checkbox" class="js-switch" data-type="unmin">
-                                <span class="lever"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="collapsible-body">
-                        <p>Open this switch will get uncompressed javascript resource.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header">
-                        <i class="material-icons">equalizer</i>
+                    </li>
+                    <li data-for="perf">
+                        <i class="fa fa-bolt" aria-hidden="true"></i>
                         <span>PERFORMANCE</span>
+                    </li>
+                    <li data-for="alert">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                        <span>ALERT</span>
+                    </li>
+                    <li data-for="booter">
+                        <i class="fa fa-cloud" aria-hidden="true"></i>
+                        <span>BOOTER</span>
+                    </li>
+                </ul>
+                <div class="active-mask js-active-mask"></div>
+            </nav>
+            <main>
+                <section id="compress">
+                    <p>Open this switch will get uncompressed javascript resource.</p>
+                    <div class="panel">
+                        <h2>Online</h2>
                         <div class="switch">
-                            <label>
-                                <input type="checkbox" class="js-switch" data-type="perf">
-                                <span class="lever"></span>
-                            </label>
+
                         </div>
+                        <ul>
+                            <li>ricequant.com</li>
+                        </ul>
+                        <div contenteditable class="input"></div>
+                        <a class="btn" href="javascript:;">Add</a>
                     </div>
-                    <div class="collapsible-body">
-                        <p>Open this switch will print performance log in console. It's useful for performance testing.</p>
+                    <div class="panel">
+                        <h2>Dev</h2>
+                        <ul>
+                            <li>naga.com</li>
+                            <li>r.com</li>
+                            <li>p.com</li>
+                        </ul>
                     </div>
-                </li>
-            </ul>
-        </main>
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container">
-                    <span>© 2016 Copyright PoppinL</span>
-                    <a class="grey-text text-lighten-4 right js-feedback" href="javascript:;">Feedback</a>
-                </div>
-            </div>
-        </footer>
-        <script src="jquery-3.0.0.min.js"></script>
-        <script src="../materialize/js/materialize.min.js"></script>
+                </section>
+                <section id="log">log</section>
+                <section id="debug">debug</section>
+                <section id="perf">perf</section>
+                <section id="alert">alert</section>
+                <section id="booter">booter</section>
+            </main>
+        </div>
+        <script src="../lib/jquery/jquery-3.1.1.min.js"></script>
         <script src="popup.js"></script>
     </body>
 </html>
