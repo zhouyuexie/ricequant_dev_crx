@@ -45,23 +45,39 @@
                 <section id="compress">
                     <p>Open this switch will get uncompressed javascript resource.</p>
                     <div class="panel">
+                        <label class="switch fr">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
                         <h2>Online</h2>
-                        <div class="switch">
-
-                        </div>
                         <ul>
-                            <li>ricequant.com</li>
+                            <li>
+                                <span>ricequant.com</span>
+                                <a href="javascript:;" class="js-action" data-type="compress" data-panel="ol" data-action="remove">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                            </li>
                         </ul>
                         <div contenteditable class="input"></div>
-                        <a class="btn" href="javascript:;">Add</a>
+                        <a class="btn js-action" data-type="compress" data-panel="ol" data-action="add" href="javascript:;">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </a>
                     </div>
                     <div class="panel">
+                        <label class="switch fr">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
                         <h2>Dev</h2>
                         <ul>
                             <li>naga.com</li>
                             <li>r.com</li>
                             <li>p.com</li>
                         </ul>
+                        <div contenteditable class="input"></div>
+                        <a class="btn js-add" href="javascript:;">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </section>
                 <section id="log">log</section>

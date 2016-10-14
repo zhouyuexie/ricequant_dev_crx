@@ -30,10 +30,8 @@ $blue: #448AFF
 }
 
 html {
-    width: 600px;
-    height: 500px;
+    width: 500px;
 }
-
 body {
     margin: 0;
     font-family: "Roboto", 'Helvetica','Arial',sans-serif;
@@ -57,6 +55,39 @@ ul {
     padding: 0;
     list-style: none;
 }
+label span {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 12px;
+    margin: 2px 40px 0 0;
+    background-color: #ccc;
+    border-radius: 10px;
+    transition: background-color 0.4s;
+}
+label input {
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+label span:after {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    top: -3px;
+    left: 0;
+    background-color: #e5e5e5;
+    transition: all 0.4s;
+}
+label input:checked + span {
+    background-color: #009688;
+}
+label input:checked + span:after {
+    left: 22px;
+    background-color: #00B8A5;
+}
 
 header {
     padding: 13px 10px 13px 20px;
@@ -71,6 +102,7 @@ header h1 {
 header a {
     line-height: 24px;
     color: #ccc;
+    transition: color 0.4s;
 }
 header a:hover {
     color: #fff;
@@ -80,7 +112,7 @@ nav {
     position: relative;
     float: left;
     width: 160px;
-    height: 450px;
+    height: 430px;
     font-size: 14px;
     background-color: #fafafa;
 }
@@ -101,7 +133,7 @@ nav i {
 }
 nav li:hover {
     color: #448AFF;
-    background-color: #f0f0f0;
+    background-color: #eee;
 }
 nav li.active {
     color: #448AFF;
@@ -127,8 +159,8 @@ nav .active-mask {
 main {
     position: relative;
     float: right;
-    width: 440px;
-    height: 450px;
+    width: 340px;
+    height: 430px;
 }
 main section {
     position: absolute;
@@ -138,7 +170,7 @@ main section {
     right: 0;
     padding: 12px 20px;
     opacity: 0;
-    transition: opacity 0.4s 0.4s;
+    transition: opacity 0.4s;
     color: #333;
 }
 main section.active {
@@ -162,23 +194,53 @@ section .panel {
     height: 100px;
     margin: 8px 0;
     border: 1px solid #eee;
-    width: 200px;
+    width: 260px;
     color: #666;
 }
 .panel li {
+    position: relative;
     padding-left: 6px;
-    line-height: 20px;
+    line-height: 24px;
+    cursor: default;
+    transition: background-color 0.4s;
+}
+.panel li i {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    color: #aaa;
+    transform: scale(0);
+    transition: all 0.4s;
 }
 .panel li:hover {
     background-color: #fafafa;
 }
+.panel li:hover i {
+    transform: scale(0.8);
+}
+.panel li:hover i:hover {
+    color: #448AFF;
+    transform: scale(1.2);
+}
 .panel .input {
     display: inline-block;
-    width: 200px;
+    width: 250px;
     height: 20px;
     line-height: 20px;
+    padding: 0 5px;
     border: 1px solid #eee;
+    transition: border-color 0.4s;
+}
+.panel .input:focus {
+    outline: none;
+    border-color: #aaa;
 }
 .panel .btn {
     display: inline-block;
+    margin-left: 5px;
+    color: #666;
+    transition: color 0.4s;
+}
+.panel .btn:hover {
+    color: #448AFF;
 }

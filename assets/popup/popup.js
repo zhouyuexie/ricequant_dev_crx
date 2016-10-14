@@ -1,6 +1,7 @@
 const
     bg = chrome.extension.getBackgroundPage(),
     lsTabKey = 'activeTab',
+    lsDataKey = 'dataStore',
     activeClass = 'active';
     
 const toggleTab = (type, action) => {
@@ -30,6 +31,10 @@ $('nav').on('click', 'li', e => {
 
     localStorage.setItem(lsTabKey, type);
     curType = type;
+});
+
+$('main').on('click', '.js-action', e => {
+    
 });
 
 
