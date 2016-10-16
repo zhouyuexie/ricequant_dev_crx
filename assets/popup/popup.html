@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <a class="fr js-feedback" href="javascript:;">Feedback</a>
+            <a class="fr js-feedback" href="#">Feedback</a>
             <h1>Ricequant Dev Tool</h1>
         </header>
         <div class="cf">
@@ -23,7 +23,7 @@
                         <span>LOG</span>
                     </li>
                     <li data-for="debug">
-                        <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                        <i class="fa fa-bug" aria-hidden="true"></i>
                         <span>DEBUG</span>
                     </li>
                     <li data-for="perf">
@@ -38,53 +38,21 @@
                         <i class="fa fa-cloud" aria-hidden="true"></i>
                         <span>BOOTER</span>
                     </li>
+                    <li data-for="facade">
+                        <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                        <span>FACADE</span>
+                    </li>
                 </ul>
                 <div class="active-mask js-active-mask"></div>
             </nav>
             <main>
-                <section id="compress">
-                    <p>Open this switch will get uncompressed javascript resource.</p>
-                    <div class="panel">
-                        <label class="switch fr">
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
-                        <h2>Online</h2>
-                        <ul>
-                            <li>
-                                <span>ricequant.com</span>
-                                <a href="javascript:;" class="js-action" data-type="compress" data-panel="ol" data-action="remove">
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <div contenteditable class="input"></div>
-                        <a class="btn js-action" data-type="compress" data-panel="ol" data-action="add" href="javascript:;">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="panel">
-                        <label class="switch fr">
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
-                        <h2>Dev</h2>
-                        <ul>
-                            <li>naga.com</li>
-                            <li>r.com</li>
-                            <li>p.com</li>
-                        </ul>
-                        <div contenteditable class="input"></div>
-                        <a class="btn js-add" href="javascript:;">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </section>
-                <section id="log">log</section>
-                <section id="debug">debug</section>
-                <section id="perf">perf</section>
-                <section id="alert">alert</section>
-                <section id="booter">booter</section>
+                <section id="compress"></section>
+                <section id="log"></section>
+                <section id="debug"></section>
+                <section id="perf"></section>
+                <section id="alert"></section>
+                <section id="booter"></section>
+                <section id="facade"></section>
             </main>
         </div>
         <script src="../lib/jquery/jquery-3.1.1.min.js"></script>

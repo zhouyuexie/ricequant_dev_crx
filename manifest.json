@@ -37,10 +37,7 @@
     },
 
     "permissions": [
-        "*://www.ricequant.com/",
-        "*://www.r.com/",
-        "*://www.p.com/",
-        "*://www.naga.com/",
+        "*://*/*",
         "cookies",
         "tabs"
     ]

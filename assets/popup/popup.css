@@ -55,12 +55,14 @@ ul {
     padding: 0;
     list-style: none;
 }
+label {
+    cursor: pointer;
+}
 label span {
     position: relative;
     display: inline-block;
     width: 40px;
     height: 12px;
-    margin: 2px 40px 0 0;
     background-color: #ccc;
     border-radius: 10px;
     transition: background-color 0.4s;
@@ -134,6 +136,7 @@ nav i {
 nav li:hover {
     color: #448AFF;
     background-color: #eee;
+    border-radius: 0 !important;
 }
 nav li.active {
     color: #448AFF;
@@ -190,6 +193,11 @@ section .panel {
     margin: 20px 0;
 }
 
+.panel label {
+    position: relative;
+    top: 2px;
+    right: 40px;
+}
 .panel ul {
     height: 100px;
     margin: 8px 0;
