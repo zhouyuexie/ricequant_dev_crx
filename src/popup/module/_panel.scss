@@ -1,0 +1,61 @@
+.panel {
+    label {
+        position: relative;
+        top: 2px;
+        right: 40px;
+    }
+    ul {
+        height: 100px;
+        margin: 8px 0;
+        border: 1px solid #eee;
+        width: 260px;
+        color: #666;
+    }
+    li {
+        position: relative;
+        padding-left: 6px;
+        line-height: 24px;
+        cursor: default;
+        transition: background-color 0.4s;
+        i {
+            position: absolute;
+            right: 5px;
+            top: 6px;
+            color: #aaa;
+            transform: scale(0);
+            transition: all 0.4s;
+        }
+        &:hover {
+            background-color: #fafafa;
+            i {
+                transform: scale(0.8);
+                &:hover {
+                    color: $blue;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    .input {
+        display: inline-block;
+        width: 250px;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 5px;
+        border: 1px solid #eee;
+        transition: border-color 0.4s;
+        &:focus {
+            outline: none;
+            border-color: #aaa;
+        }
+    }
+    .btn {
+        display: inline-block;
+        margin-left: 5px;
+        color: #666;
+        transition: color 0.4s;
+        &:hover {
+            color: #448AFF;
+        }
+    }
+}

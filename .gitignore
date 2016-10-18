@@ -1,1 +1,4 @@
 build.zip
+node_modules
+build
+npm-debug.log

@@ -1,0 +1,49 @@
+nav {
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 430px;
+    font-size: 14px;
+    background-color: #fafafa;
+    ul {
+        background-color: #fff;
+        color: #666;
+    }
+    li {
+        padding-left: 10px;
+        line-height: 40px;
+        cursor: pointer;
+        transition: all 0.4s;
+        background-color: #fafafa;
+    }
+    i {
+        width: 20px;
+        text-align: center;
+        &:hover {
+            color: $blue;
+            background-color: #eee;
+            border-radius: 0 !important;
+        }
+        &.active {
+            color: #448AFF;
+            background-color: #fff;
+            & + li {
+                border-top-right-radius: 10px;
+            }
+        }
+    }
+    .pre-active {
+        border-bottom-right-radius: 10px;
+    }
+    .active-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        border-left: 4px solid $blue;
+        z-index: 1;
+        transition: top 0.4s;
+
+    }
+}

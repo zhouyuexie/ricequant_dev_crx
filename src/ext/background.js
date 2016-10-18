@@ -56,6 +56,9 @@ const action = [ disable, enable ];
 const eventList = {
     switch: data => {
         action[+data.status](data.type);
+    },
+    test: data => {
+        alert(data);
     }
 };
 
@@ -75,4 +78,5 @@ var sendEmail = (email, subject) => {
             }, 500);
         });
     },
-    getSwitchStatus = getCookie;
+    getSwitchStatus = getCookie,
+    getLocalStorage = () => localStorage.getItem('rqcache');

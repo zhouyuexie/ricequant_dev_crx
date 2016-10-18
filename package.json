@@ -1,0 +1,28 @@
+{
+  "name": "ricequant_dev_crx",
+  "version": "0.1.0",
+  "description": "Ricequant Dev Chrome Extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppinlp/ricequant_dev_crx.git"
+  },
+  "keywords": [
+    "ricequant"
+  ],
+  "author": "PoppinL",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poppinlp/ricequant_dev_crx/issues"
+  },
+  "homepage": "https://github.com/poppinlp/ricequant_dev_crx#readme",
+  "dependencies": {
+    "postcss": "^5.2.4",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-import": "^8.1.2"
+  }
+}

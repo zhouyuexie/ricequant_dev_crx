@@ -1,0 +1,35 @@
+label {
+    cursor: pointer;
+    span {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 12px;
+        background-color: #ccc;
+        border-radius: 10px;
+        transition: background-color 0.4s;
+        &:after {
+            content: '';
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            top: -3px;
+            left: 0;
+            background-color: #e5e5e5;
+            transition: all 0.4s;
+        }
+    }
+    input {
+        width: 0;
+        height: 0;
+        margin: 0;
+        &:checked + span {
+            background-color: $green;
+        }
+        &:checked + span:after {
+            left: 22px;
+            background-color: $green;
+        }
+    }
+}

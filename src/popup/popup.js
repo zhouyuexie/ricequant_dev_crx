@@ -191,9 +191,6 @@ $('main').on('keydown', '.js-input', e => {
 });
 
 
-
-
-
 $('.js-switch').on('click', e => {
     var $target = $(e.target);
     
