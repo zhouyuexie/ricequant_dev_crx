@@ -4,6 +4,7 @@
   "description": "Ricequant Dev Chrome Extension",
   "main": "index.js",
   "scripts": {
+      "upDep": "./node_modules/.bin/npm-check-updates -ua",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,9 +21,12 @@
   },
   "homepage": "https://github.com/poppinlp/ricequant_dev_crx#readme",
   "dependencies": {
-    "postcss": "^5.2.4",
-    "postcss-cli": "^2.6.0",
-    "postcss-cssnext": "^2.8.0",
-    "postcss-import": "^8.1.2"
+    "postcss": "^5.2.16",
+    "postcss-cli": "^3.0.0",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-import": "^9.1.0"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^2.10.4"
   }
 }

@@ -12,7 +12,7 @@
             "48": "assets/ext/logo128.png",
             "128": "assets/ext/logo128.png"
         },
-        "default_popup": "assets/popup/popup.html",
+        "default_popup": "src/popup/popup.html",
         "default_title": "Ricequant Dev Tool"
     },
     "content_scripts": [{
@@ -20,14 +20,14 @@
             "*://www.ricequant.com/*"
         ],
         "js": [
-            "assets/ext/inject.js"
+            "src/ext/inject.js"
         ],
         "run_at": "document_start"
     }],
     "offline_enabled": true,
     "background": {
         "scripts": [
-            "assets/ext/background.js"
+            "src/ext/background.js"
         ]
     },
 
