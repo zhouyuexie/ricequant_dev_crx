@@ -4,7 +4,7 @@
   "description": "Ricequant Dev Chrome Extension",
   "main": "index.js",
   "scripts": {
-      "upDep": "./node_modules/.bin/npm-check-updates -ua",
+    "upDep": "./node_modules/.bin/npm-check-updates -ua",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,9 +24,12 @@
     "postcss": "^5.2.16",
     "postcss-cli": "^3.0.0",
     "postcss-cssnext": "^2.10.0",
-    "postcss-import": "^9.1.0"
+    "postcss-import": "^9.1.0",
+    "riot": "^3.3.2",
+    "webpack": "^2.3.0"
   },
   "devDependencies": {
+    "eslint": "^3.18.0",
     "npm-check-updates": "^2.10.4"
   }
 }
