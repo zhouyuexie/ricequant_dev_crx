@@ -2,7 +2,23 @@ let isInit = false; // is first
 
 const cookieName = 'rqdev'; //debug cookies name
 const cookieSplitMark = '_'; //cookies splite mark
-const curState = {};
+const curState = {};// control cookies iscan use
+
+/** @type {Array} [can custom url dev] */
+const devUrl = window.localStorage.getItem('rq_devurl') ? 
+	JSON.parse(window.localStorage.getItem('rq_devurl')) : [{
+	url: 'https://www.ricequant.com/',
+	domain: '.www.ricequant.com'
+}, {
+	url: 'http://www.r.com/',
+	domain: '.www.r.com'
+}, {
+	url: 'http://www.p.com/',
+	domain: '.www.p.com'
+}, {
+	url: 'http://www.naga.com/',
+	domain: '.www.naga.com'
+}];
 
 /**
  * init cookies values
@@ -41,19 +57,7 @@ const getCookie = () => new Promise(resolve => {
  * @return {[type]}                   [description]
  */
 const setCookie = () => Promise.all(
-	[{
-		url: 'https://www.ricequant.com/',
-		domain: '.www.ricequant.com'
-	}, {
-		url: 'http://www.r.com/',
-		domain: '.www.r.com'
-	}, {
-		url: 'http://www.p.com/',
-		domain: '.www.p.com'
-	}, {
-		url: 'http://www.naga.com/',
-		domain: '.www.naga.com'
-	}].map(item => new Promise(resolve => {
+	devUrl.map(item => new Promise(resolve => {
 		chrome.cookies.set({
 			url: item.url,
 			name: cookieName,
@@ -76,6 +80,15 @@ const action = [disable, enable];
 const eventList = {
 	switch: data => {
 		action[+data.status](data.type);
+	},
+	addUrl: data => {
+		if (data) {
+			devUrl.push(data);
+			if (!window.incofnito) {
+				// no privicy tab
+				window.localStorage.setItem('rq_devurl',JSON.stringify(devUrl));
+			}
+		}
 	}
 };
 
